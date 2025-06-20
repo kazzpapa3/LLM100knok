@@ -28,14 +28,50 @@ const def = {
     { rel: "contents" },
 
     // 第一部
-    "part-1-service.md",			//サービスそのものの説明、初級者向け
-    "chap-torapota-infra.md",
-	
+    "part-1-start.md",			//LLMの説明やはじめの一歩初級者向け
+      "chap-otsukit-hellollm.md", // ここに追記していく
+      // TBD (追加お待ちしております)
+      // 例）エージェントとマルチエージェント？
 
-	"part-4-community.md",					//コミュニティ、勉強会
-	"chap-oyakata-greetingcard.md",
+    /////////
+    "part-2-terminology.md",			//LLMの専門用語や単語などを簡素にご紹介（ここが一番重要かも）
+      "chap-otsukit-basic10word.md", 
+      "chap-otsukit-whatisvectorwithFeatureAmount.md",
+      // ここに追記していく
+      // TBD (追加お待ちしております)
+      // 例）ナレッジベースって何？
 
-    // 後書き
+
+    /////////
+    "part-3-howto.md",			      //LLMのいろいろなサービス、ツール、OSSなんかの使い方
+      "chap-otsukit-just4UtheBedrock.md", // ここに追記していく
+      // TBD (追加お待ちしております)
+      // 例）ナレッジベース追加したら４万円でひやっとした話
+
+    /////////
+    "part-4-servicetool.md",			      //AWSユーザーから見たAWS関連のいろいろなサービス、ツール Bedrock 、Q、　GenUとかいろいろ
+      // TBD (追加お待ちしております)
+      // 例）Q Developer と　Q Business って何が違うの？
+
+
+    /////////
+    "part-5-certificate.md",			      //AWSユーザーから見たAWS関連のいろいろなサービス、ツール Bedrock 、Q、　GenUとかいろいろ
+      // TBD (追加お待ちしております)
+      // 例）Q Developer と　Q Business って何が違うの？
+      
+    /////////
+  	"part-6-community.md",					//コミュニティ、勉強会、つかおうぜ
+	    "chap-oyakata-greetingcard.md",
+      // 例）銀行でLLMは採用して使えるのか？
+
+    ////////
+    "part-x-xxxxx.md",			      //LLMのいろいろ((新しい章は追加していこうとおもいます))
+        // TBD (追加お待ちしております)
+        
+
+
+
+  // 後書き
     "90-postscript.md",
     "98-authors.md",
     "99-colophon.md",
