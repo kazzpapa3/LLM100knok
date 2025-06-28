@@ -30,6 +30,7 @@ const def = {
     // 第一部
     "part-1-start.md",			//LLMの説明やはじめの一歩初級者向け
       "chap-otsukit-hellollm.md", // ここに追記していく
+	  "chap-moritalous-token.md",
       // TBD (追加お待ちしております)
       // 例）エージェントとマルチエージェント？
 
