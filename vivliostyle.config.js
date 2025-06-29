@@ -31,6 +31,7 @@ const def = {
     "part-1-start.md",			//LLMの説明やはじめの一歩初級者向け
       "chap-otsukit-hellollm.md", // ここに追記していく
 	  "chap-moritalous-token.md",
+	  "chap-yokoykou-texttosql.md",
       // TBD (追加お待ちしております)
       // 例）エージェントとマルチエージェント？
 
