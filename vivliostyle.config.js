@@ -36,11 +36,12 @@ const def = {
 
     /////////
     "part-2-terminology.md",			//LLMの専門用語や単語などを簡素にご紹介（ここが一番重要かも）
-      "chap-otsukit-basic10word.md", 
+      "chap-otsukit-basic10word.md",
       "chap-otsukit-whatisvectorwithFeatureAmount.md",
       // ここに追記していく
       // TBD (追加お待ちしております)
       // 例）ナレッジベースって何？
+      "chap-amixedcolor-chekhov's-gun-fallacy.md",
 
 
     /////////
@@ -59,7 +60,7 @@ const def = {
     "part-5-certificate.md",			      //AWSユーザーから見たAWS関連のいろいろなサービス、ツール Bedrock 、Q、　GenUとかいろいろ
       // TBD (追加お待ちしております)
       // 例）Q Developer と　Q Business って何が違うの？
-      
+
     /////////
   	"part-6-community.md",					//コミュニティ、勉強会、つかおうぜ
 	    "chap-oyakata-greetingcard.md",
@@ -68,7 +69,7 @@ const def = {
     ////////
     "part-x-xxxxx.md",			      //LLMのいろいろ((新しい章は追加していこうとおもいます))
         // TBD (追加お待ちしております)
-        
+
 
 
 
