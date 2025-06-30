@@ -32,6 +32,7 @@ const def = {
       "chap-otsukit-hellollm.md", // ここに追記していく
 	  "chap-moritalous-token.md",
 	  "chap-yokoykou-texttosql.md",
+	  "chap-moritalous-nova.md",
       // TBD (追加お待ちしております)
       // 例）エージェントとマルチエージェント？
 

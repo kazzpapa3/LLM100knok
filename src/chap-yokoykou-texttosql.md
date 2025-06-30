@@ -7,7 +7,7 @@ class: chapter
 <div class="flush-right">
 横山 昂平
 </div>
-<br>
+
 日々の業務の中で、「ちょっとした集計やデータ確認するのにSQL書くのめんどくさいなー」
 と思っているのは僕だけではないはず・・・
 
@@ -25,7 +25,7 @@ class: chapter
 
 <img src="images/chap-yokoykou-textosql/summary-architecture.png" >
 
-# こういう結果が得られます
+## こういう結果が得られます
 
 実際にやってみた結果がこちらです。
 
