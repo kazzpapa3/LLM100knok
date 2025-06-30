@@ -51,7 +51,7 @@ https://qiita.com/NiNe99/items/c50909aeee01def5835b
 ---
 
 <div class="author-profile">
-    <img src="images/chap-yokoykou-textosql/yokoykou.JPG" width="30%">
+    <img src="images/chap-yokoykou-textosql/yokoykou.jpg" width="30%">
     <div>
         <div>
             <b>横山 昂平</b>
