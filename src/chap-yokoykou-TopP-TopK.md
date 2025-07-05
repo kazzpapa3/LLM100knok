@@ -56,7 +56,7 @@ LLMは文章を生成する際、次に来る可能性のある全ての単語�
     <div>
         <div>
             <b>横山 昂平</b>
-            @NiNe99
+            @yokoykou99
         </div>
     </div>
 </div>
