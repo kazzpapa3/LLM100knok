@@ -34,7 +34,6 @@ const def = {
 	  "chap-yokoykou-texttosql.md",
 	  "chap-moritalous-nova.md",
 	  "chap-yokoykou-TopP-TopK.md",
-	  "chap-yokoykou-texttosql.md",
 	  "chap-yokoykou-prompt-engineering.md",
 
       // TBD (追加お待ちしております)
