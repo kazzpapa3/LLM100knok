@@ -59,7 +59,7 @@ https://github.com/yuuuuuuu168/terraform-vulnerability-examples
 ## Let's Checkov
 1. AWS Terraform MCP ServerをAmazon Q Developerに登録します。
     以下設定を使用しています。
-    ![Amazon_Q_Developer-MCP-setting](./src/images/chap-yuuuuuuu-qdev-terraform-mcp/Amazon_Q_Developer-MCP-setting.png)
+    ![Amazon_Q_Developer-MCP-setting](./images/chap-yuuuuuuu-qdev-terraform-mcp/Amazon_Q_Developer-MCP-setting.png)
 
 2. プロンプトで脆弱性チェックを依頼します。
 
@@ -71,21 +71,21 @@ https://github.com/yuuuuuuu168/terraform-vulnerability-examples
 
 3. まだ途中のプロンプトですが...以下のように"Checkovを使用"という宣言を確認することができます。
     
-    ![First_context](./src/images/chap-yuuuuuuu-qdev-terraform-mcp/First_context.png)
+    ![First_context](./images/chap-yuuuuuuu-qdev-terraform-mcp/First_context.png)
 
 4. "多数の重大なセキュリティ脆弱性"が発見されました。
    なお、以下のようにこういう点でまずい！という解説はありますが、具体的にどの部分のコードがまずいのか？という説明はありませんでした。
    
-    ![Scan1](./src/images/chap-yuuuuuuu-qdev-terraform-mcp/Scan1.png)
-    ![Scan2](./src/images/chap-yuuuuuuu-qdev-terraform-mcp/Scan2.png)
-    ![Scan3](./src/images/chap-yuuuuuuu-qdev-terraform-mcp/Scan3.png)
+    ![Scan1](./images/chap-yuuuuuuu-qdev-terraform-mcp/Scan1.png)
+    ![Scan2](./images/chap-yuuuuuuu-qdev-terraform-mcp/Scan2.png)
+    ![Scan3](./images/chap-yuuuuuuu-qdev-terraform-mcp/Scan3.png)
 
 5. ということで、具体的にコードのどの部分がまずいのか？と聞いてみると、該当箇所とそこをどう修正したらよいかの提案をしてくれました。
     "+-"で前後の比較もわかりやすく、問題箇所やどう編集したら良いか判断がつきやすいようになっています。
 
     以下、S3のブロックパブリックアクセスと暗号化の例
 
-    ![Diff](./src/images/chap-yuuuuuuu-qdev-terraform-mcp/Diff.png)
+    ![Diff](./images/chap-yuuuuuuu-qdev-terraform-mcp/Diff.png)
 
 ## Checkov結果について
 前章で記載した通り、今回、25個の脆弱性を仕込んでいました。
@@ -117,7 +117,7 @@ AIを使いこなす技量、大事ですよ！
 ---
 
 <div class="author-profile">
-    <img src="src/images/chap-yuuuuuuu-qdev-review/yuuuuuuu_icon.png" width="30%">
+    <img src="./images/chap-yuuuuuuu-qdev-review/yuuuuuuu_icon.png" width="30%">
     <div>
         <div>
             <b>Yuuuuuuu</b>

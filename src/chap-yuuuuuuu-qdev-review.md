@@ -54,21 +54,21 @@ https://github.com/yuuuuuuu168/terraform-vulnerability-examples
 
 ## Let's review！！
 1. VS Codeの入力欄に"/review"と入力
-![/reviewを入力](src/images/chap-yuuuuuuu-qdev-review/input-review.png)
+![/reviewを入力](./images/chap-yuuuuuuu-qdev-review/input-review.png)
 
 2. 最初に、review対象がワークスペース(今作業をしているフォルダ)なのか、アクティブなファイルなのかが聞かれます
-![workspace_or_active_file](src/images/chap-yuuuuuuu-qdev-review/workspace_or_active-file.png)
+![workspace_or_active_file](./images/chap-yuuuuuuu-qdev-review/workspace_or_active-file.png)
 
 3. しばらく待っていると....reviewが終わり、計16個(Critical2個、High5個、Medium9個)の脆弱性が発見されました
-![review step1](src/images/chap-yuuuuuuu-qdev-review/review_step1.png)
+![review step1](./images/chap-yuuuuuuu-qdev-review/review_step1.png)
 
 4. 具体的な脆弱性ポイントを見てみると...例えばCriticalな脆弱性の一つに、ハードコードされたCredential(認証)が存在していることが指摘されています
 何が問題かを指摘するだけでなく、Terraformコードのどこにその脆弱性が含まれているか、画面左のISSUESをクリックすると、画面右側でハイライトされるのはいいですね
-![review step2](src/images/chap-yuuuuuuu-qdev-review/review_step2.png)
+![review step2](./images/chap-yuuuuuuu-qdev-review/review_step2.png)
 
 5. VS Codeのコード上で波線がついている箇所にマウスカーソルをフォーカスさせると、そのリソース部分内で発生している脆弱性をpickすることができます。また、"Explain"をクリックすると、なぜそれが脆弱なのかの説明や、どうすれば良いかという提案までしてくれます
 
-![review step3](src/images/chap-yuuuuuuu-qdev-review/review_step3.png)
+![review step3](./images/chap-yuuuuuuu-qdev-review/review_step3.png)
 
 ## review結果について
 今回、細かい脆弱性を含めて、25個仕込んでいました
@@ -92,7 +92,7 @@ Amazon Q Developer、月に$20でここまでわかりやすいreviewができ�
 ---
 
 <div class="author-profile">
-    <img src="src/images/chap-yuuuuuuu-qdev-review/yuuuuuuu_icon.png" width="30%">
+    <img src="./images/chap-yuuuuuuu-qdev-review/yuuuuuuu_icon.png" width="30%">
     <div>
         <div>
             <b>Yuuuuuuu</b>
