@@ -11,7 +11,7 @@ Yuuuuuuu
 ## はじめに
 皆さんTerraform書いてますか？(以下略)
 
-本章は"その① /review編"の続編として設定しています。
+本章は"その① /review編"の続編として設定しています。 </br>
 この章では、Amazon Q Developerを拡張する機能であるMCPを、そして、AWS公式から提供されているAWS Terraform MCP Serverを用いて脆弱性診断を試してみます。
 
 ## AWS Terraform MCP Serverが提供している機能
@@ -39,12 +39,12 @@ https://github.com/awslabs/mcp
 https://github.com/awslabs/mcp/tree/main/src/terraform-mcp-server
 
 ### Checkovとは
-今回メインで使用するCheckovについても触れておきます。
-CheckovはInfrastructure as Code（IaC）とソフトウェア構成分析（SCA）のための静的コード解析ツールです。
-今回のターゲットであるTerraformをはじめ、CloudFormation、Kubernetes、Helmなどのクラウドインフラストラクチャ設定をスキャンして、デプロイ前に設定ミスを発見することができます。
+今回メインで使用するCheckovについても触れておきます。 </br>
+CheckovはInfrastructure as Code（IaC）とソフトウェア構成分析（SCA）のための静的コード解析ツールです。 </br>
+今回のターゲットであるTerraformをはじめ、CloudFormation、Kubernetes、Helmなどのクラウドインフラストラクチャ設定をスキャンして、デプロイ前に設定ミスを発見することができます。 </br>
 GitHub ActionsなどのCI/CDツールもサポートしており、CheckovでOKとなったコードのみをデプロイする、といった分岐に組み込むことができます。
 
-今回は、MCPサーバの機能として利用してみます。
+今回は、AWS Terraform MCP Serverの1機能として利用してみます。
 
 Checkovの公式ページ
 
@@ -57,8 +57,8 @@ https://www.checkov.io/
 https://github.com/yuuuuuuu168/terraform-vulnerability-examples
 
 ## Let's Checkov
-1. AWS Terraform MCP ServerをAmazon Q Developerに登録します。
-    以下設定を使用しています。
+1. AWS Terraform MCP Serverを以下設定にて、Amazon Q Developerに登録します。
+
     ![Amazon_Q_Developer-MCP-setting](./images/chap-yuuuuuuu-qdev-terraform-mcp/Amazon_Q_Developer-MCP-setting.png)
 
 2. プロンプトで脆弱性チェックを依頼します。
@@ -69,34 +69,34 @@ https://github.com/yuuuuuuu168/terraform-vulnerability-examples
     ```
     
 
-3. まだ途中のプロンプトですが...以下のように"Checkovを使用"という宣言を確認することができます。
+3. まだ途中のプロンプトですが...以下のように"Checkov"という宣言を確認することができます。
     
     ![First_context](./images/chap-yuuuuuuu-qdev-terraform-mcp/First_context.png)
 
-4. "多数の重大なセキュリティ脆弱性"が発見されました。
+4. "多数の重大なセキュリティ脆弱性"が発見されました。 </br>
    なお、以下のようにこういう点でまずい！という解説はありますが、具体的にどの部分のコードがまずいのか？という説明はありませんでした。
    
     ![Scan1](./images/chap-yuuuuuuu-qdev-terraform-mcp/Scan1.png)
     ![Scan2](./images/chap-yuuuuuuu-qdev-terraform-mcp/Scan2.png)
     ![Scan3](./images/chap-yuuuuuuu-qdev-terraform-mcp/Scan3.png)
 
-5. ということで、具体的にコードのどの部分がまずいのか？と聞いてみると、該当箇所とそこをどう修正したらよいかの提案をしてくれました。
+5. ということで、具体的にコードのどの部分がまずいのか？と聞いてみると、該当箇所とそこをどう修正したらよいかの提案をしてくれました。 </br>
     "+-"で前後の比較もわかりやすく、問題箇所やどう編集したら良いか判断がつきやすいようになっています。
 
     以下、S3のブロックパブリックアクセスと暗号化の例
 
     ![Diff](./images/chap-yuuuuuuu-qdev-terraform-mcp/Diff.png)
 
-## Checkov結果について
-前章で記載した通り、今回、25個の脆弱性を仕込んでいました。
+## AWS Terraform MCP Server結果について
+前章で記載した通り、今回、25個の脆弱性を仕込んでいました。 </br>
 このうち、AWS Terraform MCP Serverによって指摘を受けたのは22個でした。
 
-Amazon Q Developerの"/review"と比較すると、例えば前章で指摘して欲しかったと記載したEC2インスタンスのIMDS V2の利用を指摘してくれました。
-上記の他、Amazon Q Developerが指摘して、AWS Terraform MCP Serverの指摘漏れ...というものもありませんでした。
-指摘できなかったものの例として、例えばSecrets Managerのシークレットのローテーションをしていない、というものです。
-あまりSecrets Managerを使わないため、これがどの程度脆弱なのかを指摘することができないのですが、そこまで指摘するほどではない...ということなのでしょうか(まあ、ローテーションをしないのにSecrets Managerを使うなよ、とは思いますけど)。
+Amazon Q Developerの"/review"と比較すると、例えば前章で指摘して欲しかったと記載したEC2インスタンスのIMDS V2の利用を指摘してくれています。 </br>
+上記の他、Amazon Q Developerが指摘して、AWS Terraform MCP Serverの指摘漏れ...というものもありませんでした。 </br>
+指摘できなかったものの例として、例えばSecrets Managerのシークレットのローテーションをしていない、というものです。 </br>
+私があまりSecrets Managerを使わないため、これがどの程度脆弱なのかを評価することができないのですが、そこまで指摘するほどではない...ということなのでしょうか(まあ、ローテーションをしないのにSecrets Managerを使うなよ、とは思いますけど)。
 
-また、Amazon Q Developer同様に、zip化されたLambdaコードに関しての指摘もありませんでした。
+また、Amazon Q Developer同様に、zip化されたLambdaコードに関しての指摘もありませんでした。 </br>
 これは、**Terraform**のMCPサーバだから、というのもあるのでしょうか。
 
 ## おわりに
@@ -110,7 +110,7 @@ AWS Terraform MCP Serverは脆弱性の指摘は的確で、個人的に必須�
 1. Amazon Q Developerの"/review"でおおまかな脆弱性を潰す
 2. AWS Terraform MCP Serverでその他脆弱性が残っていないか最終チェックを行う
 
-それぞれの機能を把握して、うまく、上手に使っていきましょう。
+それぞれの機能を把握して、うまく、上手に使っていきましょう。 </br>
 AIを使いこなす技量、大事ですよ！
 
 #### 著者紹介
