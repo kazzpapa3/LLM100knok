@@ -56,6 +56,10 @@ https://www.checkov.io/
 
 https://github.com/yuuuuuuu168/terraform-vulnerability-examples
 
+## 実行環境
+- VSCode:バージョン: 1.101.2
+- Amazon Q Developer(VSCode拡張機能)：1.81.0
+
 ## Let's Checkov
 1. AWS Terraform MCP Serverを以下設定にて、Amazon Q Developerに登録します。
 

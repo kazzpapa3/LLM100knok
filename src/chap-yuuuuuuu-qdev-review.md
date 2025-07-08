@@ -52,6 +52,10 @@ https://docs.aws.amazon.com/ja_jp/amazonq/latest/qdeveloper-ug/code-reviews.html
 
 https://github.com/yuuuuuuu168/terraform-vulnerability-examples
 
+## 実行環境
+- VSCode:バージョン: 1.101.2
+- Amazon Q Developer(VSCode拡張機能)：1.81.0
+
 ## Let's review！！
 1. VS Codeの入力欄に"/review"と入力
 ![/reviewを入力](./images/chap-yuuuuuuu-qdev-review/input-review.png)
@@ -66,7 +70,7 @@ https://github.com/yuuuuuuu168/terraform-vulnerability-examples
 何が問題かを指摘するだけでなく、Terraformコードのどこにその脆弱性が含まれているか、画面左のISSUESをクリックすると、画面右側でハイライトされるのはいいですね
 ![review step2](./images/chap-yuuuuuuu-qdev-review/review_step2.png)
 
-5. VS Codeのコード上で波線がついている箇所にマウスカーソルをフォーカスさせると、そのリソース部分内で発生している脆弱性をpickすることができます。 </br>
+5. VS Codeのコード上で波線がついている箇所にマウスカーソルをフォーカスさせると、そのリソース部分内で発生している脆弱性を確認することができます。 </br>
 また、"Explain"をクリックすると、なぜそれが脆弱なのかの説明や、どうすれば良いかという提案までしてくれます
 
 ![review step3](./images/chap-yuuuuuuu-qdev-review/review_step3.png)
