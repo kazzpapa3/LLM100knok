@@ -35,6 +35,8 @@ const def = {
 	  "chap-moritalous-nova.md",
 	  "chap-yokoykou-TopP-TopK.md",
 	  "chap-yokoykou-prompt-engineering.md",
+	  "chap-yuuuuuuu-qdev-terraform-mcp.md",
+	  "chap-yuuuuuuu-qdev-review.md",
 
       // TBD (追加お待ちしております)
       // 例）エージェントとマルチエージェント？
